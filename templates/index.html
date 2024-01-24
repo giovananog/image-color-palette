@@ -1,0 +1,17 @@
+{% include "header.html" %}
+
+<div class="index-content">
+    <div class="options-index">
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="file">Escolha uma imagem:</label>
+            <input type="file" id="file" name="file" accept="image/*">
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <div class="image-index">
+        <img src={{ filename }}>
+    </div>
+</div>
+
+{% include "footer.html" %}
