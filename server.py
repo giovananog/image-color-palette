@@ -21,7 +21,7 @@ def index_page():
     else:
         return render_template('index.html')
 
-@app.route('/image')
+@app.route('/image', methods=['POST'])
 def image_show_page():
     return render_template('show-img.html')
 
