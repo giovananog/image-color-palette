@@ -1,21 +1,14 @@
 {% include "header.html" %}
 
-
 <div class="index-content">
-    <div class="image-index"></div>
+    <div class="image-index">
+        <img src={{ filename }}>
+    </div>
     <div class="color-image">
-        <div class="color-rgb"></div>
-        <div class="color-rgb"></div>
-        <div class="color-rgb"></div>
-        <div class="color-rgb"></div>
-        <div class="color-rgb"></div>
-        <div class="color-rgb"></div>
-        <div class="color-rgb"></div>
-        <div class="color-rgb"></div>
-        <div class="color-rgb"></div>
+        {% for rgb_tuple in list %}
+            <div class="color-rgb" style="background-color: rgb({{ rgb_tuple[0] }}, {{ rgb_tuple[1] }}, {{ rgb_tuple[2] }});"></div>
+        {% endfor %}
     </div>
 </div>
-
-
 
 {% include "footer.html" %}

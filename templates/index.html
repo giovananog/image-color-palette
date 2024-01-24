@@ -9,9 +9,9 @@
                 <input type="submit" value="Enviar">
             </form>
         {% else %}
-            <form action="/image" method="post" class="upload-form">
-                <label for="file">How many colors you want to see?</label>
-                <input type="number" name="numeroEscolhido" min="1" max="10">
+            <form action="/image" method="post" enctype="multipart/form-data" class="upload-form">
+                <label for="count">How many colors you want to see?</label>
+                <input type="number" name="count" min="1" max="10">
               <input type="submit" value="Enviar">
             </form>
         {% endif %}
