@@ -1,7 +1,32 @@
 {% include "header.html" %}
 
-<div class="index-content">
-    <div class="image-index">
+<script>
+    function rgbToHex(r, g, b) {
+        return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+    }
+
+    function componentToHex(c) {
+        var hex = c.toString(16);
+        return hex.length == 1 ? "0" + hex : hex;
+    }
+
+    window.onload = function() {
+        var divs = document.querySelectorAll('.color-rgb');
+
+        divs.forEach(function(div) {
+            var backgroundColor = getComputedStyle(div).backgroundColor;
+            var rgbValues = backgroundColor.match(/\d+/g);
+            var convertedColor = rgbToHex(parseInt(rgbValues[0]), parseInt(rgbValues[1]), parseInt(rgbValues[2]));
+
+            var p = document.createElement('p');
+            p.textContent = convertedColor;
+            div.appendChild(p);
+        });
+    };
+</script>
+
+<div class="show-img-content">
+    <div class="show-img-index">
         <img src={{ filename }}>
     </div>
     <div class="color-image">
