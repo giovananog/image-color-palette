@@ -4,11 +4,11 @@
 }
 
 body {
-    background-color: rgb(249, 251, 238);
+    background-color: #f8f8f8;
 }
 
 .header-div {
-    background-color: rgb(230, 239, 186);
+    background-color: #e0e0e0;
     height: 10vh;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@ body {
     font-weight: bolder;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: rgb(249, 251, 238);
+    color: #333;
 }
 
 .footer-div {
@@ -30,13 +30,13 @@ body {
     font-weight: bolder;
     text-transform: uppercase;
     letter-spacing: 1.2;
-    color: rgb(230, 239, 186);
+    color: #333;
 }
 
 .index-content {
     width: 50%;
     height: 60vh;
-    background-color: rgb(230, 239, 186);
+    background-color: #e0e0e0;
     margin: 5% auto;
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@ body {
 .show-img-content {
     width: 80%;
     height: 70vh;
-    background-color: rgb(230, 239, 186);
+    background-color: #e0e0e0;
     margin: 5% auto;
     display: flex;
     justify-content: space-around;
@@ -79,15 +79,15 @@ body {
 
 
 .options-index {
-    width: 40%;
-    height: 12%;
+    width: 80%;
+    height: 20%;
     padding: 2%;
 }
 
 .color-image {
     width: 40%;
     height: 70%;
-    background-color: rgb(230, 239, 186);
+    background-color: #e0e0e0;
     display: flex;
     align-content: space-between;
     justify-content: center;
@@ -111,4 +111,33 @@ body {
     width: 30%;
     height: 30%;
     margin: 1%;
+}
+
+img {
+    border: 2px solid black;
+}
+
+.upload-label {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+    font-size: larger;
+}
+
+.upload-label:hover {
+    color: #0077cc;
+}
+
+.upload-form input {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+    font-size: small;
+}
+
+.choose-color {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+    font-size: medium;
 }
