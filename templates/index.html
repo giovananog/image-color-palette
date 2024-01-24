@@ -2,15 +2,22 @@
 
 <div class="index-content">
     <div class="options-index">
-        <form action="/" method="post" enctype="multipart/form-data">
-            <label for="file">Escolha uma imagem:</label>
-            <input type="file" id="file" name="file" accept="image/*">
-            <br>
-            <input type="submit" value="Enviar">
-        </form>
+        {% if not filename %}
+            <form action="/" method="post" enctype="multipart/form-data" class="upload-form">
+                <label for="file">Upload your image (jpg/jpeg):</label>
+                <input type="file" id="file" name="file" accept="image/*">
+                <input type="submit" value="Enviar">
+            </form>
+        {% else %}
+            <form action="/image" method="post" class="upload-form">
+                <label for="file">How many colors you want to see?</label>
+                <input type="number" name="numeroEscolhido" min="1" max="10">
+              <input type="submit" value="Enviar">
+            </form>
+        {% endif %}
     </div>
     <div class="image-index">
-        <img src={{ filename }}>
+        <img src={{ filename or '../static/default.jpg'}}>
     </div>
 </div>
 
